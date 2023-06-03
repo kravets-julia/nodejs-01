@@ -11,20 +11,7 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// const {program} = require("commander");
-
-// program
-//   .option("-a, --action, <type>")
-//   .option("-i, --id, <type>")
-//   .option("-n, --name, <type>")
-//   .option("-e, --email, <type>")
-//   .option("-p, --phone, <type>");
-
-// program.parse();
-
-// const argv = program.opts();
-
-const contacts = require("./db/contacts");
+const contacts = require("./contacts");
 
 const invokeAction = async ({action, id, name, email, phone}) => {
   switch (action) {
